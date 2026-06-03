@@ -12,7 +12,7 @@ export default async function SiteHeader() {
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
         <Link href="/" className="flex items-center gap-3">
           <img
-            src="/api/logo"
+            src="/logo.svg"
             alt="MDLBEAST"
             className="h-9 w-9 rounded-md border border-white/10"
           />
