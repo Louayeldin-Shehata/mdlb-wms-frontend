@@ -9,6 +9,8 @@ export default defineConfig({
     path: "prisma/migrations",
   },
   datasource: {
-    url: process.env["DATABASE_URL"],
+    // Use the non-pooling (direct) URL for migrations — required when the
+    // runtime URL goes through a pooler (Supabase PgBouncer / Vercel Postgres).
+    url: process.env["DIRECT_URL"] ?? process.env["DATABASE_URL"],
   },
 });
