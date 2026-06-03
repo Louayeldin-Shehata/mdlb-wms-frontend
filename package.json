@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "mdlb-wms",
   "version": "0.1.0",
   "private": true,
   "engines": {
@@ -11,6 +11,8 @@
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run",
+    "db:migrate:deploy": "prisma migrate deploy",
+    "db:seed": "node prisma/seed.mjs",
     "postinstall": "prisma generate"
   },
   "dependencies": {
@@ -32,6 +34,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "dotenv": "^16.6.1",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
